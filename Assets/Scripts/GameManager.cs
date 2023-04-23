@@ -37,6 +37,8 @@ public class GameManager : MonoBehaviour
     public int counter = 0;
     public int STOPINVOKE = 0;
 
+    public GameObject pressAnything;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,7 +53,8 @@ public class GameManager : MonoBehaviour
         endGame = false;
 
         scoreText.text = "Score: " + 0;
-        multiText.text = "Multiplier: x" + currentMultiplier;        
+        multiText.text = "Multiplier: x" + currentMultiplier;      
+        pressAnything.SetActive(true);
     }
 
     // Update is called once per frame
@@ -65,6 +68,7 @@ public class GameManager : MonoBehaviour
                 startPlaying = true;
                 Dancer.SetActive(true);
                 theMusic.Play();
+                pressAnything.SetActive(false);
             }
         }
 
