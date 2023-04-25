@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7270778039366215152}
   m_Layer: 5
   m_Name: BlueArrow
-  m_TagString: Untagged
+  m_TagString: Arrows
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -65,4 +65,9 @@ public class RandomSpawner : MonoBehaviour
             }
         }       
     }
+
+    public void TurnOff()
+    {
+        this.gameObject.SetActive(false);   
+    }
 }

@@ -28,5 +28,5 @@ public class Button : MonoBehaviour
         {
             theSR.sprite = defaultImage;
         }
-    }
+    }    
 }

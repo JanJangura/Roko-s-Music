@@ -7,6 +7,7 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
     AudioSource[] audios;
+    GameManager gameManager;
 
     public static bool isPaused; // False by default and static bool is a global variable 
 
@@ -15,12 +16,13 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         audios = GetComponentsInChildren<AudioSource>(); // This gets all the audio source of the childrens in the heirarchy. 
+        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !gameManager.endGame)
         {
             if (isPaused)
             {
@@ -71,7 +73,7 @@ public class PauseMenu : MonoBehaviour
     public void Restart()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("GamePlay");
+        SceneManager.LoadScene("GameScene");
         isPaused = false;
     }
 }

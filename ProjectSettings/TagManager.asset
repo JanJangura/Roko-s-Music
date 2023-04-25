@@ -7,6 +7,10 @@ TagManager:
   - Activator
   - Destroy
   - Null
+  - GameManager
+  - HealthBar
+  - Arrows
+  - RandomSpawner
   layers:
   - Default
   - TransparentFX

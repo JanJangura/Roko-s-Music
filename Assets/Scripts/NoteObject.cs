@@ -9,11 +9,12 @@ public class NoteObject : MonoBehaviour
     public KeyCode keyToPress;
 
     public GameObject hitEffect, goodEffect, perfectEffect, missEffect;
+    GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();      
     }
 
     // Update is called once per frame
@@ -31,16 +32,19 @@ public class NoteObject : MonoBehaviour
                 {
                     GameManager.instance.NormalHit();
                     Instantiate(hitEffect, transform.position, hitEffect.transform.rotation);
+                    gameManager.NormalNotes(1);
                 }
                 else if(Mathf.Abs(transform.position.y) > 0.12f)
                 {
                     GameManager.instance.GoodHit();
                     Instantiate(goodEffect, transform.position, hitEffect.transform.rotation);
+                    gameManager.GoodNotes(1);
                 }
                 else 
                 {
                     GameManager.instance.PerfectHit();
                     Instantiate(perfectEffect, transform.position, hitEffect.transform.rotation);
+                    gameManager.PerfectNotes(1);
                 }
             }
         }
@@ -67,7 +71,9 @@ public class NoteObject : MonoBehaviour
                 canBePressed = false;
                 GameManager.instance.NoteMissed();
                 Destroy(this.gameObject);
-                Instantiate(missEffect, transform.position, hitEffect.transform.rotation);
+                Instantiate(missEffect, transform.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), hitEffect.transform.rotation);
+                gameManager.DamageTaken(1);
+                gameManager.Missed(1);
             }
 
         }
