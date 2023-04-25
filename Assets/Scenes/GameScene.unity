@@ -2108,7 +2108,7 @@ MonoBehaviour:
   - {fileID: 2007248258}
   - {fileID: 505962074}
   currentScore: 0
-  GameTime: 190
+  GameTime: 15
   shutOffTime: 180
   scorePerNote: 100
   scorePerGoodNote: 125

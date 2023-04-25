@@ -60,7 +60,6 @@ public class GameManager : MonoBehaviour
     public int perfectNotesHit = 0;
     public int missedNotes = 0;
     public int finalScore;
-    float percentageHit;
 
     [Header("HEALTH")]
     public int currentHealth = 50;
@@ -223,15 +222,6 @@ public class GameManager : MonoBehaviour
     public void Display()
     {
         finalScore = currentScore;
-        int totalHits = (normalNotesHit + goodNotesHit + perfectNotesHit);
-
-        if (missedNotes > 0){
-            percentageHit = totalHits / (missedNotes + totalHits);
-        }
-        else
-        {
-            percentageHit = 100;
-        }
 
         for (int i = 0; i < ToggleGameObjectsOnOff.Length; i++)
         {
@@ -242,7 +232,23 @@ public class GameManager : MonoBehaviour
         GoodNotesHit.text = "Good Notes Hit: " + goodNotesHit + " Hits!";
         PerfectNotesHit.text = "Perfect Notes Hit: " + perfectNotesHit + " Hits!";
         MissedNotes.text = "Missed Notes Hit: " + missedNotes + " Missed!";
-        PercentageHit.text = "Percentage Hit: " + percentageHit + " %";
+        PercentageHit.text = "Percentage Hit: " + getPercentageHits() + " %";
         FinalScore.text = "FINAL SCORE: " + currentScore + " PTS"; ;
+    }
+
+    float getPercentageHits()
+    {
+        int totalHits = normalNotesHit + goodNotesHit + perfectNotesHit;
+        int overallThings = normalNotesHit + goodNotesHit + perfectNotesHit + missedNotes;
+        float totaloverall = (float)totalHits / (float)overallThings;
+        if (overallThings > 0)
+        {
+
+            return Mathf.Round(totaloverall * 100f);
+        }
+        else
+        {
+            return 0;
+        }
     }
 }
