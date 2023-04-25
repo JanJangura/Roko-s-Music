@@ -160,7 +160,7 @@ public class GameManager : MonoBehaviour
     {
         currentMultiplier = 1;
         multiplierTracker = 0;
-        multiText.text = "Multiplier: x" + currentMultiplier;
+        multiText.text = "Multi: x" + currentMultiplier;
         counter = 0;
     }
 
