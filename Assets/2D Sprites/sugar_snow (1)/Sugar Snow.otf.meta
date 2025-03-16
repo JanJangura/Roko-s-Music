@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: a932c74fd0483bd46992a9363f2a0734
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Sugar Snow
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 198e13a66d24e7f419a798da8496ac51, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

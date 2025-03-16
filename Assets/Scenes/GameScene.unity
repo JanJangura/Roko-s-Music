@@ -2093,7 +2093,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   theMusic: {fileID: 890110871}
   startPlaying: 0
-  beatTempo: 93
+  beatTempo: 79
   DROPTHEBEAT: 0
   ToggleGameObjectsOnOff:
   - {fileID: 919132149086744787}
@@ -2108,8 +2108,8 @@ MonoBehaviour:
   - {fileID: 2007248258}
   - {fileID: 505962074}
   currentScore: 0
-  GameTime: 190
-  shutOffTime: 190
+  GameTime: 170
+  shutOffTime: 170
   scorePerNote: 100
   scorePerGoodNote: 125
   scorePerPerfectNote: 150
@@ -2428,7 +2428,7 @@ GameObject:
   - component: {fileID: 890110872}
   - component: {fileID: 890110871}
   m_Layer: 0
-  m_Name: ChenningXiongSong 1
+  m_Name: MusicSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2444,7 +2444,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 11aa7c22796873f4abd303d28789efd6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 974bdbdd719ce0545903338aea579670, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.394
   m_Pitch: 1
